@@ -29,7 +29,7 @@ app.post('/start', (request, response) => {
   const data = {
     color: '#DFFF00',
     head_url: 'http://www.placecage.com/c/200/200', // optional, but encouraged!
-    taunt: "Let's do thisss thang!", // optional, but encouraged!
+    taunt: "Gonna eat you ssssssuckers!", // optional, but encouraged!
   }
 
   return response.json(data)
@@ -42,7 +42,7 @@ app.post('/move', (request, response) => {
   // Response data
   const data = {
     move: 'up', // one of: ['up','down','left','right']
-    taunt: 'Outta my way, snake!', // optional, but encouraged!
+    taunt: 'Hiss hiss, motherfuckers!', // optional, but encouraged!
   }
 
   return response.json(data)

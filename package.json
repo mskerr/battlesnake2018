@@ -27,4 +27,3 @@
     "start": "PORT=5000 nodemon -c 'node index.js'"
   }
 }
-© 2018 GitHub, Inc.
