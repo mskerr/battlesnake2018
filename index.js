@@ -24,6 +24,9 @@ app.use(poweredByHandler)
 // Handle POST request to '/start'
 app.post('/start', (request, response) => {
   // NOTE: Do something here to start the game
+	
+	// add in image
+	// https://upload.wikimedia.org/wikipedia/commons/f/f2/Citrus_reticulata.jpg
 
   // Response data
   const data = {
