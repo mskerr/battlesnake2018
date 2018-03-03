@@ -42,8 +42,21 @@ app.post('/start', (request, response) => {
 // Handle POST request to '/move'
 app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
+var test function(){ Math.floor(Math.random() * 4);
 
-
+	if(test===0){
+		return "left";
+	if(test===1){
+		return "up";	
+	}
+	if(test===2){
+		return "right";
+	}
+	if(test===3){
+		return "down";	
+	}
+	}
+/*
 var data = bottle.request.json;
 
 function choice(data) {
@@ -90,9 +103,10 @@ let k = 1;
 	k = k + 2;
 }
 }
+*/
   // Response data
   const data = {
-    move: choice(data), // one of: ['up','down','left','right']
+    move: test, // one of: ['up','down','left','right']
     taunt: 'Hiss hiss, motherfuckers!', // optional, but encouraged!
   }
 
