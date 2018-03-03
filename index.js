@@ -42,6 +42,7 @@ app.post('/start', (request, response) => {
 		turn forward
 	}
 	else 	{
+	pick random
 	"oh no!"
 	}
 }
