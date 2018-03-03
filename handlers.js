@@ -31,7 +31,7 @@ const notFoundHandler = (err, req, res, next) => {
   res.status(404)
   return res.send({
     status: 404,
-    error: err.message || "These are not the snakes you're looking for",
+    error: err.message || "Thissss ssssssucksssssss",
   })
 }
 
