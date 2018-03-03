@@ -36,48 +36,6 @@ app.post('/start', (request, response) => {
   }
 
 
-  /*
-  
-  collision avoidance below 
-  
-  
-  if (left blocked)	{
-	if (forward blocked)	{
-		turn right
-	}
-	else if (right blocked)	{
-		turn forward
-	}
-	else 	{
-	"oh no!"
-	}
-}
-else if (right blocked)	{
-	if (forward blocked)	{
-		turn left
-	}
-	else if (left blocked)	{
-		move forward
-	}
-	else	{
-		pick random
-		"oh no!"
-	}
-}
-
-else if (forward blocked)	{
-	if (left blocked)	{
-		turn right
-	}
-	else if (right blocked)	{
-		turn left
-	}
-	else	{
-		pick random
-		"oh no!"
-	}
-} */
-
   return response.json(data)
 })
 
@@ -85,9 +43,56 @@ else if (forward blocked)	{
 app.post('/move', (request, response) => {
   // NOTE: Do something here to generate your move
 
+
+var data = bottle.request.json;
+
+function choice(data) {
+
+
+boardWidth = data.get('width');
+boardHeight = data.get('height');
+
+var i = 0;
+var x = 1;
+var k = 0;
+var dontMove;
+var usX;
+var usY;
+
+while(data[i].body!=null){
+	dontMove[i]=data[1].body.data[i]x;
+	dontMove[x]=data[2].body.data[x]y;
+	x=x+2;
+	i=i+2;
+}
+
+while(data[k].body!=null){
+	if(data[k].name=='Hek the Snek'){
+	usY = data[k].body.data[0]y;
+	usX = data[k].body.data[0]x;
+	}
+}
+
+for(let i = 0; i < dontMove.length();i+2){
+let k = 1;
+	if(usX + 1 != dontMove[i]&&usX != boardWidth){
+		return "right";
+	}
+	if(usY + 1 != dontMove[k]&&usY != boardHeight){
+		return "down";
+	}
+	if(usX - 1 != dontMove[i]&&usX != 0){
+		return "left";
+	}
+	if(usY - 1 != dontMove[i]&&usY != 0){
+		return "up";
+	}
+	k = k + 2;
+}
+}
   // Response data
   const data = {
-    move: 'up', // one of: ['up','down','left','right']
+    move: choice(data), // one of: ['up','down','left','right']
     taunt: 'Hiss hiss, motherfuckers!', // optional, but encouraged!
   }
 
