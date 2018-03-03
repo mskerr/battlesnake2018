@@ -34,6 +34,10 @@ app.post('/start', (request, response) => {
 
 
   /*
+  
+  collision avoidance below 
+  
+  
   if (left blocked)	{
 	if (forward blocked)	{
 		turn right
