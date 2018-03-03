@@ -32,6 +32,45 @@ app.post('/start', (request, response) => {
     taunt: "Gonna eat you ssssssuckers!", // optional, but encouraged!
   }
 
+
+  /*
+  if (left blocked)	{
+	if (forward blocked)	{
+		turn right
+	}
+	else if (right blocked)	{
+		turn forward
+	}
+	else 	{
+	"oh no!"
+	}
+}
+else if (right blocked)	{
+	if (forward blocked)	{
+		turn left
+	}
+	else if (left blocked)	{
+		move forward
+	}
+	else	{
+		pick random
+		"oh no!"
+	}
+}
+
+else if (forward blocked)	{
+	if (left blocked)	{
+		turn right
+	}
+	else if (right blocked)	{
+		turn left
+	}
+	else	{
+		pick random
+		"oh no!"
+	}
+} */
+
   return response.json(data)
 })
 
