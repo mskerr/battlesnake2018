@@ -46,6 +46,7 @@ var test function(){ Math.floor(Math.random() * 4);
 
 	if(test===0){
 		return "left";
+	}
 	if(test===1){
 		return "up";	
 	}
